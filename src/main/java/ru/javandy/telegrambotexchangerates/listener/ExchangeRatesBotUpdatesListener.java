@@ -28,7 +28,9 @@ public class ExchangeRatesBotUpdatesListener implements UpdatesListener {
             Message message = update.message();
             if (message != null) {
                 messageHandler.handleMessage(message, extractChatId(message));
+
             }
+            updates.forEach(System.out::println);
         });
         return UpdatesListener.CONFIRMED_UPDATES_ALL;
     }

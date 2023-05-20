@@ -7,8 +7,8 @@ import ru.javandy.telegrambotexchangerates.service.ExchangeRateCalculation;
 public class ExchangeRateCalculationImpl implements ExchangeRateCalculation {
     @Override
     public String calculation(String inputMessage) {
-        int sumCalculation = 0;
-        int currency = 0;
+        int sumCalculation;
+        int currency;
 
         if (inputMessage.contains("$")) {
             String[] subStr = inputMessage.split("\\$");
